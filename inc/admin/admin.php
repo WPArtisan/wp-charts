@@ -1,6 +1,6 @@
 <?php
 function wp_charts_add_settings_link( $links ) {
-    $settings_link = '<a href="'.admin_url( 'upload.php?page=wp-charts' ).'">' . __( 'Docs', 'nona' ) . '</a>';
+    $settings_link = '<a href="'. esc_url( admin_url( 'upload.php?page=wp-charts' ) ) . '">' . esc_html__( 'Docs', 'nona' ) . '</a>';
     array_push( $links, $settings_link );
     return $links;
 }
@@ -25,35 +25,35 @@ function wp_chart_submenu_page_callback() {
 
     $doc_boxes =  array(
         array(
-            'title' => __( 'Pie Chart', 'nona' ),
-            'shortcode' => __( '[wp_charts title="mypie" type="pie" align="alignright" margin="5px 20px" data="10,32,50,25,5"]', 'nona' ),
-            'content' => __( '[wp_charts title="mypie" type="pie" align="alignright" margin="5px 20px" data="10,32,50,25,5"]', 'nona' ),
+            'title'     => esc_html__( 'Pie Chart', 'nona' ),
+            'shortcode' => esc_html__( '[wp_charts title="mypie" type="pie" align="alignright" margin="5px 20px" data="10,32,50,25,5"]', 'nona' ),
+            'content'   => esc_html__( '[wp_charts title="mypie" type="pie" align="alignright" margin="5px 20px" data="10,32,50,25,5"]', 'nona' ),
         ),
         array(
-            'title' => __( 'Doughnut Chart', 'nona' ),
-            'shortcode' => __( '[wp_charts title="mydough" type="doughnut" align="alignleft" margin="5px 20px" data="30,10,55,25,15,8" colors="69D2E7,#E0E4CC,#F38630,#96CE7F,#CEBC17,#CE4264"]', 'nona' ),
-            'content' => __( '[wp_charts title="mydough" type="doughnut" align="alignleft" margin="5px 20px" data="30,10,55,25,15,8" colors="69D2E7,#E0E4CC,#F38630,#96CE7F,#CEBC17,#CE4264"]', 'nona' ),
+            'title'     => esc_html__( 'Doughnut Chart', 'nona' ),
+            'shortcode' => esc_html__( '[wp_charts title="mydough" type="doughnut" align="alignleft" margin="5px 20px" data="30,10,55,25,15,8" colors="69D2E7,#E0E4CC,#F38630,#96CE7F,#CEBC17,#CE4264"]', 'nona' ),
+            'content'   => esc_html__( '[wp_charts title="mydough" type="doughnut" align="alignleft" margin="5px 20px" data="30,10,55,25,15,8" colors="69D2E7,#E0E4CC,#F38630,#96CE7F,#CEBC17,#CE4264"]', 'nona' ),
         ),
         array(
-            'title' => __( 'Polar Area Chart', 'nona' ),
-            'shortcode' => __( '[wp_charts title="mypolar" type="polarArea" align="alignright" margin="5px 20px" data="40,32,5,25,50,45" labels="one,two,three,four,five,six"]', 'nona' ),
-            'content' => __( '[wp_charts title="mypolar" type="polarArea" align="alignright" margin="5px 20px" data="40,32,5,25,50,45" labels="one,two,three,four,five,six"]', 'nona' ),
+            'title'     => esc_html__( 'Polar Area Chart', 'nona' ),
+            'shortcode' => esc_html__( '[wp_charts title="mypolar" type="polarArea" align="alignright" margin="5px 20px" data="40,32,5,25,50,45" labels="one,two,three,four,five,six"]', 'nona' ),
+            'content'   => esc_html__( '[wp_charts title="mypolar" type="polarArea" align="alignright" margin="5px 20px" data="40,32,5,25,50,45" labels="one,two,three,four,five,six"]', 'nona' ),
         ),
         array(
-            'title' => __( 'Bar Chart', 'nona' ),
-            'shortcode' => __( '[wp_charts title="barchart" type="bar" align="alignleft" margin="5px 20px" datasets="40,32,50,35 next 20,25,45,42 next 40,43, 61,50 next 33,15,40,22" labels="one,two,three,four"]', 'nona' ),
-            'content' => __( '[wp_charts title="barchart" type="bar" align="alignleft" margin="5px 20px" datasets="40,32,50,35 next 20,25,45,42 next 40,43, 61,50 next 33,15,40,22" labels="one,two,three,four"]', 'nona' ),
+            'title'     => esc_html__( 'Bar Chart', 'nona' ),
+            'shortcode' => _esc_html___( '[wp_charts title="barchart" type="bar" align="alignleft" margin="5px 20px" datasets="40,32,50,35 next 20,25,45,42 next 40,43, 61,50 next 33,15,40,22" labels="one,two,three,four"]', 'nona' ),
+            'content'   => esc_html__( '[wp_charts title="barchart" type="bar" align="alignleft" margin="5px 20px" datasets="40,32,50,35 next 20,25,45,42 next 40,43, 61,50 next 33,15,40,22" labels="one,two,three,four"]', 'nona' ),
         ),
 
         array(
-            'title' => __( 'Line Chart', 'nona' ),
-            'shortcode' => __( '[wp_charts title="linechart" type="line" align="alignright" margin="5px 20px" datasets="40,43,61,50 next 33,15,40,22" labels="one,two,three,four"]', 'nona' ),
-            'content' => __( '[wp_charts title="linechart" type="line" align="alignright" margin="5px 20px" datasets="40,43,61,50 next 33,15,40,22" labels="one,two,three,four"]', 'nona' ),
+            'title'     => esc_html__( 'Line Chart', 'nona' ),
+            'shortcode' => esc_html__( '[wp_charts title="linechart" type="line" align="alignright" margin="5px 20px" datasets="40,43,61,50 next 33,15,40,22" labels="one,two,three,four"]', 'nona' ),
+            'content'   => esc_html__( '[wp_charts title="linechart" type="line" align="alignright" margin="5px 20px" datasets="40,43,61,50 next 33,15,40,22" labels="one,two,three,four"]', 'nona' ),
         ),
         array(
-            'title' => __( 'Radar Chart', 'nona' ),
-            'shortcode' => __( '[wp_charts title="radarchart" type="radar" align="alignleft" margin="5px 20px" datasets="20,22,40,25,55 next 15,20,30,40,35" labels="one,two,three,four,five" colors="#CEBC17,#CE4264"]', 'nona' ),
-            'content' => __( '[wp_charts title="radarchart" type="radar" align="alignleft" margin="5px 20px" datasets="20,22,40,25,55 next 15,20,30,40,35" labels="one,two,three,four,five" colors="#CEBC17,#CE4264"]', 'nona' ),
+            'title'     => esc_html__( 'Radar Chart', 'nona' ),
+            'shortcode' => esc_html__( '[wp_charts title="radarchart" type="radar" align="alignleft" margin="5px 20px" datasets="20,22,40,25,55 next 15,20,30,40,35" labels="one,two,three,four,five" colors="#CEBC17,#CE4264"]', 'nona' ),
+            'content'   => esc_html__( '[wp_charts title="radarchart" type="radar" align="alignleft" margin="5px 20px" datasets="20,22,40,25,55 next 15,20,30,40,35" labels="one,two,three,four,five" colors="#CEBC17,#CE4264"]', 'nona' ),
         ),
     );
 
@@ -118,14 +118,14 @@ function wp_chart_submenu_page_callback() {
         }
     </style>
     <div class="wrap">
-        <h1><?php _e( 'WP Charts', 'nona' ); ?></h1>
+        <h1><?php esc_html_e( 'WP Charts', 'nona' ); ?></h1>
         <div id="poststuff">
-            <h3><?php _e( 'Example Shortcode Usage', 'nona' ); ?></h3>
+            <h3><?php esc_html_e( 'Example Shortcode Usage', 'nona' ); ?></h3>
             <div class="postbox-container meta-box-sortables">
                 <?php foreach ( $doc_boxes as $box ){ ?>
                 <div class="wp-chart-box postbox closed">
                     <button aria-expanded="false" class="handlediv button-link" type="button">
-                        <span class="screen-reader-text"><?php printf( __( 'Toggle panel: %s', 'nona' ), $box['title'] ); ?></span>
+                        <span class="screen-reader-text"><?php printf( esc_html__( 'Toggle panel: %s', 'nona' ), $box['title'] ); ?></span>
                         <span aria-hidden="true" class="toggle-indicator"></span>
                     </button>
                     <h2 class="hndle ui-sortable-handle"><span><?php echo esc_html( $box['title'] ); ?></span></h2>
@@ -139,7 +139,7 @@ function wp_chart_submenu_page_callback() {
 
 
             <div class="postbox-container meta-box-sortables">
-                <h3><?php _e( 'All Shortcode Attributes', 'nona' ); ?></h3>
+                <h3><?php esc_html_e( 'All Shortcode Attributes', 'nona' ); ?></h3>
 
 <pre class="shortcode">'type'             = "pie"
 choose from pie, doughnut, radar, polararea, bar, line
